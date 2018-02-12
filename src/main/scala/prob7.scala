@@ -1,0 +1,3 @@
+object prob7 {
+
+}
