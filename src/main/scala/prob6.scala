@@ -33,7 +33,7 @@ object prob6 {
 
   //method2 : using reverse
   def isPalRev[A](ls: List[A]):Boolean={
-    val revList = reverSe(ls) // or ls.reverse which is List function
+    val revList = reverSe(ls) // or ls.reverse which is List function ; here used reverse from prob5
     if(revList == ls) true
     else false
   }
