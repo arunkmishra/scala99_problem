@@ -7,7 +7,7 @@ import scala.annotation.tailrec
 
 object prob10 {
   def main(args: Array[String]): Unit = {
-    val ls = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+    val ls = List()
 
     println("encode by me : "+ encodeByMe(ls))
 
@@ -18,6 +18,7 @@ object prob10 {
     @tailrec
     def enTail(res: List[(Int,A)],lis: List[List[A]]): List[(Int,A)]= lis match{
       case Nil => res
+      case h :: tail if h == Nil => res
       case h :: tail => enTail((h.length,h.head)::res,tail)
     }
     enTail(List[(Int,A)](),lis).foldLeft(List[(Int,A)]()){(h,r) => r :: h}
