@@ -29,7 +29,7 @@ object prob11 {
     encodeNewTail(List[Any](),lis).foldLeft(List[Any]()){(h,r) => r ::h}
   }
   def encodeMap[A](ls: List[A]): List[Any] = {
-    val lis = encodeByMe(ls)
+    val lis = encodeByMe(ls)        //encodeByMe is a function from prob 10
 
     lis.map(e => if(e._1 == 1) e._2 else e)
   }

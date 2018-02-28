@@ -1,7 +1,7 @@
 /*encode(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
 res0: List[(Int, Symbol)] = List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e))*/
 
-import prob9.pack
+import prob09.pack
 
 import scala.annotation.tailrec
 
