@@ -6,6 +6,10 @@ object prob14 {
     val ls = List('a, 'b, 'c, 'c, 'd)
 
     println("Duplicate : " + duplicate(ls))
+
+    println("Duplicate2 : " + duplicate2(ls))
   }
   def duplicate[A](ls: List[A]): List[A] = ls.flatMap{ e => List.fill(2)(e)}
+
+  def duplicate2[S](ls: List[S]) = ls flatMap(e => List(e, e))
 }
