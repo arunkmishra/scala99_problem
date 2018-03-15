@@ -11,6 +11,8 @@ object prob21 {
     println("InsertAt : " + insertAt('new, 1, ls))
 
     println("InsertAt tail rec : " + insertAtRec('new, -4, ls))
+
+    println("InsertAt Split : " + insertAtSplit('new, 1, ls))
   }
 
   def insertAt[T](ele: T, pos: Int, ls: List[T]): List[T] = ls.take(pos) ::: List(ele) ::: ls.drop(pos)
@@ -24,5 +26,10 @@ object prob21 {
       case (i,h::tail) => insertAtTail(i-1,res:+h,tail)
     }
     insertAtTail(n, List[A](),ls)
+  }
+
+  def insertAtSplit[A](ele: A, n: Int, ls: List[A]):List[A] = {
+    val (pre, post) = ls.splitAt(n)
+    pre ::: List(ele) ::: post
   }
 }
