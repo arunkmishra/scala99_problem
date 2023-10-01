@@ -16,7 +16,6 @@ object practice extends App {
     val c = reT(List.empty[Char], ls)
     c.mkString
   }
-
   val ls: List[Char] = "axefyzijkmoq".toList
 
 
